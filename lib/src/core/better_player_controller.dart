@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io';
+
 import 'package:better_player/better_player.dart';
 import 'package:better_player/src/configuration/better_player_controller_event.dart';
 import 'package:better_player/src/core/better_player_utils.dart';
@@ -138,6 +139,10 @@ class BetterPlayerController {
   ///Overridden aspect ratio which will be used instead of aspect ratio passed
   ///in configuration.
   double? _overriddenAspectRatio;
+
+  ///Overridden aspect ratio which will be used instead of aspect ratio passed
+  ///in configuration.
+  BoxFit? _overriddenBoxFit;
 
   ///Was Picture in Picture opened.
   bool _wasInPipMode = false;
@@ -1018,6 +1023,12 @@ class BetterPlayerController {
   ///Setup overridden aspect ratio.
   void setOverriddenAspectRatio(double aspectRatio) {
     _overriddenAspectRatio = aspectRatio;
+  }
+
+  // ignore: use_setters_to_change_properties
+  ///Setup overridden box fit.
+  void setOverriddenBoxFit(BoxFit boxFit) {
+    _overriddenBoxFit = boxFit;
   }
 
   ///Get aspect ratio used in current video. If aspect ratio is null, then
