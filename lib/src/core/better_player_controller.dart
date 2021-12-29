@@ -140,7 +140,7 @@ class BetterPlayerController {
   ///in configuration.
   double? _overriddenAspectRatio;
 
-  ///Overridden aspect ratio which will be used instead of aspect ratio passed
+  ///Overridden box fit which will be used instead of box fit passed
   ///in configuration.
   BoxFit? _overriddenBoxFit;
 
